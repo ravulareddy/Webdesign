@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Knowledge Hub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="library.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script>
+$(document).ready(function(){
+    $("#loginBtn").click(function(){
+        $("#loginModal").modal();
+    });
+});
+
+
+
+</script>
+
+ </head>
+ 
+<body id="myHome" data-spy="scroll" data-target=".navbar" data-offset="50">  
+<div class="container">
+  <div  class="row"> 
+        <div class="col-sm-4">
+          <img class="img-responsive" src="images/logo.png" alt="Logo">
+        </div>      
+        <div class="col-sm-4">
+          <!--<img class="img-responsive navbar-right" src="images/ISA.jpg" alt="Logo"> -->
+          <p class="navbar-text visible-lg">
+       Hours Today: Open 24 Hours <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+      </p>
+        </div>  
+         <div class="col-sm-4">
+      <div class="topbar-left pull-right">
+          <ul class="nav navbar-nav navbar-left">
+          <li><a href="#" id="loginBtn"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#" id="loginBtn"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+      </div> 
+      </div>
+      </div>
+
+<div class="row"> 
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset="50">
+
+ <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#myHome">Home</a></li>
+        <li ><a href="#">About Us</a></li>
+        <li><a href="library.html">Library</a></li>
+         <li><a href="#">Events</a></li>
+         <li><a href="#">E-Learning</a></li>
+         <li><a href="#">Services</a></li> 
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Help</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       
+       <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+    <li>
+     <form role="search" class="navbar-form navbar-left" id ="form1">
+        <div class="input-group">
+        <input type="text" id="animatedSrch" class="form-control" placeholder="Search Blogs, Forums, E-Resources, Discussions">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"/>
+        </button>
+        </span>
+        </div>
+    </form>
+    </li>
+
+      </ul>
+      
+    </div>
+
+</nav>
+
+</div>
+</div>
+
+
+<div class="container text-center">
+  <div class="row">
+
+ <div class="icon-bar-toggle" data-toggle="collapse" data-target="#myIconbar" >
+ <span class="icon fa-stack fa-3x pull-right iconRight">
+  <i class="fa fa-comment fa-stack-2x" style="color: #48b17b;"></i>
+   <strong class="fa-stack comment-text" style="font-size: 12px; text-align: left;">Click Me</strong>
+</span>
+ </div>
+   
+  <div class="col-md-12">
+  <div class="collapse icon-bar" id="myIconbar">
+  <a class="active" href="#"><i class="fa fa-home"></i></a> 
+  <a href="#"><i class="fa fa-search"></i></a> 
+   <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i></a>
+  <a href="#"><i class="fa fa-id-card" aria-hidden="true"></i></a> 
+ <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+  <a href="#"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i></a> 
+  <a href="#"><i class="fa fa-question" aria-hidden="true"></i></a>
+  <a href="#"><i class="fa fa-envelope-open" aria-hidden="true"></i></a>
+
+  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+</div>
+             <form class="form-horizontal searchForm" role="form" action="library.php" method="post">
+              <div class="input-group" id="adv-search">
+                <input type="text" name="searchTxt" class="form-control lrgsrch fontmore" placeholder="What can we help you find?"/>
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="btn btn-default dropdown-toggle lrgsrch" data-toggle="dropdown" aria-expanded="false">More Options<span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                               <h4 class="text-muted"> Refine your search </h4>
+                                  <div class="form-group">
+                                  <label class="radio-inline">
+                                    <input type="radio" name="optradio" value="title">Title
+                                  </label>
+                                  <label class="radio-inline">
+                                    <input type="radio" name="optradio" value="author">Author
+                                  </label>
+                                  <label class="radio-inline">
+                                    <input type="radio" name="optradio" value="isbn">ISBN
+                                  </label>
+                              
+                                  </div>
+                                  <h4 class="text-muted"> Search by </h4>
+                                  <div class="form-group">
+                                  
+                                    <label for="contain">Keyword</label>
+                                    <input class="form-control" type="text" />
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="contain">Contains the words</label>
+                                    <input class="form-control" type="text" />
+                                  </div>
+                                
+                            </div>
+                        </div>
+                        <button type="submit" name="submit" class="btn btn-primary lrgsrch"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                     </div>
+                </div>
+            </div>
+            </form>
+          </div>
+</div>
+</div>
+
+       
+
+<div class="container">
+<div class="row">
+<div class="col-md-8">
+<h2 class="text-info">Libraries and hours</h2>
+  <table class="table table-striped">
+    
+    
+    <tbody>
+      <tr>
+        <td>
+          <img typeof="foaf:Image" class="img-responsive" src="images/thumb1.jpg" width="100" height="100" alt="">
+        </td>
+        <td>
+         <h3 class="text-primary">Fine Arts Library</h3>
+         <div class="today-hours">9am - 9pm 
+          <span class="label label-success library-open">Open</span>
+          </div>  
+        </td>
+        <td>
+        <div class="list-phone"><span>Reference:</span> (617) 785-3822</div>
+        <div class="list-phone"><span>Circulation:</span> (617) 895-3822</div>
+        <div class="list-email"><a href="mailto:arts@khub.edu">arts@khub.edu</a></div>
+        </td>
+      </tr>
+      <tr>
+        <td> <img typeof="foaf:Image" class="img-responsive" src="images/thumb2.jpg" width="100" height="100" alt=""></td>
+        <td><h3 class="text-primary">Engineering Library</h3>
+         <div class="today-hours">24/7 study space and computing only
+          <span class="label label-success library-open">Always Open</span>
+          </div> </td>
+        <td><div class="list-phone"><span>Reference:</span> (617) 785-3822</div>
+        <div class="list-phone"><span>Circulation:</span> (617) 895-3822</div>
+        <div class="list-email"><a href="mailto:engg@khub.edu">engg@khub.edu</a></div></td>
+      </tr>
+      <tr>
+        <td> <img typeof="foaf:Image" class="img-responsive" src="images/thumb3.jpg" width="100" height="100" alt=""></td>
+        <td><h3 class="text-primary">Medical Library</h3>
+         <div class="today-hours">9am - 11pm
+          <span class="label label-success library-open"> Open</span>
+          </div> </td>
+        <td><div class="list-phone"><span>Reference:</span> (617) 785-3821</div>
+        <div class="list-phone"><span>Circulation:</span> (617) 895-3825</div>
+        <div class="list-email"><a href="mailto:med@khub.edu">med@khub.edu</a></div></td>
+      </tr>
+      <tr>
+        <td> <img typeof="foaf:Image" class="img-responsive" src="images/thumb4.jpg" width="100" height="100" alt=""></td>
+        <td><h3 class="text-primary">Management Library</h3>
+         <div class="today-hours">9am - 11pm
+          <span class="label label-success library-open"> Open</span>
+          </div> </td>
+        <td><div class="list-phone"><span>Reference:</span> (617) 785-3862</div>
+        <div class="list-phone"><span>Circulation:</span> (617) 895-3827</div>
+        <div class="list-email"><a href="mailto:mngmnt@khub.edu">mngmnt@khub.edu</a></div></td>
+      </tr>
+      <tr>
+        <td> <img typeof="foaf:Image" class="img-responsive" src="images/thumb5.jpg" width="100" height="100" alt=""></td>
+        <td><h3 class="text-primary">Music Library</h3>
+         <div class="today-hours">9am - 11pm
+          <span class="label label-success library-open"> Open</span>
+          </div> </td>
+        <td><div class="list-phone"><span>Reference:</span> (617) 785-3829</div>
+        <div class="list-phone"><span>Circulation:</span> (617) 895-3820</div>
+        <div class="list-email"><a href="mailto:law@khub.edu">law@khub.edu</a></div></td>
+      </tr>
+      <tr>
+        <td> <img typeof="foaf:Image" class="img-responsive" src="images/thumb6.jpg" width="100" height="100" alt=""></td>
+        <td><h3 class="text-primary">Law Library</h3>
+         <div class="today-hours">9am - 11pm
+          <span class="label label-success library-open"> Open</span>
+          </div> </td>
+        <td><div class="list-phone"><span>Reference:</span> (617) 785-3824</div>
+        <div class="list-phone"><span>Circulation:</span> (617) 895-3828</div>
+        <div class="list-email"><a href="mailto:law@khub.edu">law@khub.edu</a></div></td>
+      </tr>
+    </tbody>
+  </table>
+ </div>
+ <div class="col-md-1">
+ </div>
+ <div class="col-md-3">
+ <div>
+ <br/>
+ <br/>
+ </div>
+
+ <div class="hoverZmOut">
+      <a href="library_news.html">
+      <figure ><img src="images/Library_News.jpg" /></figure>
+      <figcaption> Library News</figcaption></a>
+    </div>
+     <div class="hoverZnIn">
+     <a href= "library_events.html">
+      <figure><img src="images/events_library.png" /></figure>
+      <figcaption>Library Events</figcaption></a>
+    </div>
+     <div class="hoverRte">
+     <a href="followUs.html">
+      <figure><img src="images/facebook-twitter.jpg" /></figure>
+      <figcaption>Follow us on</figcaption></a>
+    </div>
+  </div>
+
+
+ 
+ 
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="reserveStudyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Reserve Study Room</h4>
+        <p> To find Space available place
+         <a href="reserveStudy.html">click here </a></p>
+      </div>
+      <div class="modal-body">
+      <!-- &&& -->
+        <form method="post" action="bookRoom.php">
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Date:</label>
+            <input type="text" class="form-control" id="date">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Time:</label>
+           <input type="text" class="form-control" id="time">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Room Type:</label>
+            <input type="text" class="form-control" id="buildingName">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Room No:</label>
+            <input type="text" class="form-control" id="roomNo">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Reserve</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login -->
+
+<div class="container">
+  
+  <div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form-inline">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username: </label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password: </label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+
+<!-- End of Login Modal -->
+<div class="container">
+<h2> About Library </h2>
+</div>
+<div class="container well">
+
+ <div class="row">
+      
+      <div class="media">
+ <div class="col-sm-12-pull-top col-md-6 col-lg-6">
+ 
+     <p>Knowledge Hub Library was established in 1911 and is one of the one of the best scientific and technical libraries. It seeks to align its mission and values with those of the Knowledge Hub while also articulating a unique vision for the Library’s future. Our mission is to advance the intellectual vitality, knowledge, and creativity of the Portland State University community. We are committed to the University motto, Let Knowledge Serve the City. </p>
+     <p> Presently it subscribes to around 300 international Journals on various subjects. It has one of the best collection of literature on Statistics, Mathematics, Quality Engineering/ Management and Library & Information Science. 
+     <a href=""></p> 
+
+  </div>
+  <div class="col-sm-6">
+   <div class="media-left pull-left">
+    <img src="images/bckgrnd1.jpg" class="media-object" onmouseover="this.src='images/srch_bckgrnd1.jpg'" onmouseout="this.src='images/bckgrnd2.jpg'">
+  </div>
+  </div>
+</div>
+
+  
+   </div>  
+</div>
+
+ <div class="container">
+
+ <div class="row">
+   <div class="col-md-3 thumbnail ">
+      <a href="reserveStudy.html">
+        <img src="images/study.jpg" class="img-responsive img-rounded" alt="study">
+        <div class="caption thumbnailtxtImg text-center">
+          <h3>Reserve Study Room</h3>
+          <p><span class="glyphicon glyphicon-question-sign"></span>
+        </div>
+      </a>
+
+        <div class="overlay overlayServ3">
+        <div class="text"><a href="researchSupport.html">
+        <h1>Reserve a <br/> Study Room</h1></a></div>
+      </div>
+
+  </div>
+  <div class="col-md-3 thumbnail ">
+      <a href="askLibrarian.html">
+        <img src="images/askLibrarian.jpg" class="img-responsive" alt="study" ">
+        <div class="caption thumbnailtxtImg text-center">
+          <h3>Ask a Librarian</h3>
+          <p><span class="glyphicon glyphicon-question-sign"></span>
+        </div>
+      </a>
+
+        <div class="overlay overlayServ2">
+        <div class="text"><a href="researchSupport.html">
+        <h1>Ask a Librarian</h1></a></div>
+      </div>
+  </div>
+  <div class="col-md-3 thumbnail ">
+      <a href="researchSupport.html">
+        <img src="images/servStudents.jpg" class="img-responsive " alt="study"">
+        <div class="caption thumbnailtxtImg text-center">
+          <h3>Research Support</h3>
+          <p><span class="glyphicon glyphicon-user"></span></p>
+        </div>
+      </a>
+
+       <div class="overlay overlayServ1">
+        <div class="text"><a href="researchSupport.html">
+        <h1>Research <br/> &nbsp;&nbsp;&nbsp;&nbsp;& <br/>Support</h1></a></div>
+      </div>
+
+  </div>
+
+  <div class="col-md-3 thumbnail">
+      <a href="libraryServices.html">
+        <img src="images/study1.jpg" class="img-responsive " alt="study"">
+        <div class="caption thumbnailtxtImg text-center">
+          <h3>Library Services</h3>
+          <p><span class="glyphicon glyphicon-th-list"></span></p>
+        </div>
+      </a>
+
+       <div class="overlay overlayServ">
+        <div class="text"><a href="libraryServices.html">
+        <h1>Library Services</h1></a></div>
+      </div>
+
+  </div>
+  </div>
+
+ </div>
+
+
+
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myHome" data-toggle="tooltip" title="Go to Home">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br>
+
+  <div class="container-fluid mid-section">
+ <div>
+   <div class="row">
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption" style="position:inherit;">
+           <h4>Services</h4>
+           <ul>
+             <li><a href="#">Issue Books</a></li>
+             <li><a href="#">Printings</a></li>
+             <li><a href="#">Online Seminars</a></li>
+             <li><a href="#">3D Display Room</a></li>
+             <li><a href="#">Shipping Facilities</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption">
+           <h4>Research Help</h4>
+           <ul>
+             <li><a href="#">Personal Research Reserves</a></li>
+             <li><a href="#">Subject Matter Specialist</a></li>
+             <li><a href="#">Research Guides</a></li>
+             <li><a href="#">Citations</a></li>
+              <li><a href="#">Online Research Access</a></li>
+             <li><a href="#">Ask a libarian</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption">
+           <h4>Learning Outreach</h4>
+           <ul>
+             <li><a href="#">Scholarships</a></li>
+             <li><a href="#">Lifelong Learnings</a></li>
+             <li><a href="#">Certifications</a></li>
+             <li><a href="#">Writing Meetups</a></li>
+             <li><a href="#">BLOGging</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption">
+           <h4>Library Spaces</h4>
+           <ul>
+             <li><a href="#">Auditoriums</a></li>
+             <li><a href="#">Group Study Rooms</a></li>
+             <li><a href="#">Collaboration Labs</a></li>
+             <li><a href="#">Food Joints</a></li>
+             <li><a href="#">Business Rooms</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+  <br>
+
+  <nav class="socialmediaicons">
+    
+  <h4 id="title"> </h4>
+  <ul>
+  <li>
+  <img src='images/facebook.png' alt='facebook' onclick="callSocialMedia('facebook')" /> 
+  </li>
+  <li>
+  <img src='images/twitter.png' alt='twitter' onclick="callSocialMedia('twitter')"/> 
+  </li>
+  <li>
+  <img src='images/flickr.png' alt='flickr' onclick="callSocialMedia('flickr')"/>
+  </li>
+  <li>
+  <img src='images/youtube.png' alt='youtube' onclick="callSocialMedia('youtube')"/>
+  </li>
+  </ul>
+  </nav>
+  <br/>
+  <p>&copy;Knowledge Hub</p>  
+<a href="mailto:sruthi.ravula@knowledgehub.com">sruthi@ravula.com</a>
+</footer>
+
+</body>
+</html>

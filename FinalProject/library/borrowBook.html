@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Knowledge Hub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="library.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ </head>
+ 
+<body id="myHome" data-spy="scroll" data-target=".navbar" data-offset="50">  
+<div class="container-fluid">
+  <div  class="row"> 
+        <div class="col-sm-4">
+          <img class="img-responsive" src="images/logo.png" alt="Logo">
+        </div>      
+        <div class="col-sm-4">
+          <!--<img class="img-responsive navbar-right" src="images/ISA.jpg" alt="Logo"> -->
+          <p class="navbar-text visible-lg">
+       Hours Today: Open 24 Hours <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+      </p>
+        </div>  
+         <div class="col-sm-4">
+      <div class="topbar-left pull-right">
+          <ul class="nav navbar-nav navbar-left">
+          <li><a href="#" id="loginBtn"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#" id="loginBtn"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+      </div> 
+      </div>
+      </div>
+
+<div class="row"> 
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset="50">
+
+ <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#myHome">Home</a></li>
+        <li ><a href="#">About Us</a></li>
+        <li><a href="library.html">Library</a></li>
+         <li><a href="#">Events</a></li>
+         <li><a href="#">E-Learning</a></li>
+         <li><a href="#">Services</a></li> 
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Help</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       
+       <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+    <li>
+     <form role="search" class="navbar-form navbar-left" id ="form1">
+        <div class="input-group">
+        <input type="text" id="animatedSrch" class="form-control" placeholder="Search Blogs, Forums, E-Resources, Discussions">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"/>
+        </button>
+        </span>
+        </div>
+    </form>
+    </li>
+
+      </ul>
+      
+    </div>
+
+</nav>
+
+</div>
+</div>
+
+
+	
+  	<div class="container-fluid">
+
+        <div class="row">
+        <div class="col-md-4">
+          
+              <h3> 
+               How do I borrow from the Knowledge hub Library?
+              </h3>
+                <ul>
+                <li> You can look up for books online to find the library. You can bring the book to the 
+                reception and fill the form manually.
+               
+                <li> You can fill the form online and go to library reception desk to collect your book.</li> 
+                </ul>
+
+               <h3> I am a visitor, Can I borrow book from Library ? </h3>
+               <li> To borrow materials from library, please <a href="visitor.html"> click here </a>
+                and follow instructions. </li>
+
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="control-label">Search Catalog</label>
+                        
+                            <input type="text" class="form-control" placeholder="Search Books, Articles, journals, etc">
+                        
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">By</label>
+                        
+                            <select class="form-control" placeholder="Country">
+                                <option value="">All</option>
+                                <option value="">Title</option>
+                                <option value="">Author</option>
+                                <option value="">Description</option>
+                                <option value="">ISBN</option>
+                            </select>
+                      
+                    </div>
+    
+                    <br/>
+                        <button type="submit" class="btn btn-success">Search</button>
+                 
+                </form>
+          
+           </div> 
+           <div class="col-md-8">
+             <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Date:</label>
+            <input type="text" class="form-control" id="date">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Time:</label>
+           <input type="text" class="form-control" id="time">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Room Type:</label>
+            <input type="text" class="form-control" id="buildingName">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Room No:</label>
+            <input type="text" class="form-control" id="roomNo">
+          </div>
+        </form>
+           </div>
+            <div>
+
+           </div> 
+          </div>  
+            
+</body>
+</html>	

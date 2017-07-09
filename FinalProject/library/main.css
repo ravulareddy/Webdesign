@@ -1,0 +1,241 @@
+body {
+    background-color: #fff;
+    color: #353331;
+    line-height: 1.7;
+}
+
+
+.dropdown-menu li a {
+      color:  #222222 !important;
+    }
+
+  .dropdown-menu li a:hover {
+      background-color: #41a72e !important;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%);  
+      width: 100%; 
+      margin: auto;
+  }
+
+  .carousel-inner .item img {
+      
+      height: 500px;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+   @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+
+  .bkgd_green {
+	color: #bdbdbd;
+	background-color: #2f716b;
+	
+
+  }
+  .search{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: grey;
+   
+  }
+
+ .bckg_blue {
+	color: #bdbdbd;
+  	font-family: courier, sans-serif;
+  	text-align:  center;
+  	background-color: #284356;
+  	font-size: 
+  }
+
+  footer{
+  background-color: black;
+  padding: 40px;
+  color: #9d9d9d;
+	font-size: .80em;
+	font-style: italic;
+	text-align: center;
+
+}
+  footer a {
+    /*  color: #9d9d9d; 
+    color : black; */
+    color : #878c8f;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+
+
+
+.dropdown-menu li a {
+      color:  #222222 !important;
+      padding: 3px 20px;
+      display: block;
+    }
+
+ .dropdown-menu li a:hover {
+      background-color: #f5f5f5 !important;
+  }
+
+  .dropdown-submenu {
+    position: relative;
+}
+
+.navbar-inverse{
+      border: 0;
+      z-index: 2000;
+    }
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    -webkit-border-radius: 0 3px 3px 3px;
+    -moz-border-radius:0 3px 3px;
+    border-radius: 0 3px 3px 3px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+    }
+
+  .dropdown-submenu > a:after {
+      display: block;
+      content: " ";
+      float: right;
+      width: 0;
+      height: 0;
+      border-width: 5px 0 5px 5px;
+      border-color: transparent;
+      
+      
+    }  
+
+  .carousel-inner img {
+      width: 100%; 
+      margin: auto;
+  }
+
+  .navbar-right .dropdown-menu
+  {
+    padding: 20px;
+  }
+
+#loginForm input{
+  margin-bottom: 20px;
+
+}
+
+.affix {
+      top: 0;
+      left:0;
+      width:100%;      
+    }
+
+    .affix + .container-fluid {
+      padding-top: 70px;
+    }
+
+.media-left img{
+
+  width:550px;
+  height:300px;
+}
+
+  .carousel-inner .item img {
+      
+      height: 500px;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+   @media (max-width: 768px) {
+    .carousel-caption {
+      display: none; 
+    }
+
+    .media-left{
+      display: none;
+    }
+.navbar-nav{
+    margin: 0;
+  }
+
+  .navbar-fixed-top{
+    position: static;
+  }
+
+
+  }
+
+.socialmediaicons ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socialmediaicons ul li {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.socialmediaicons ul li img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.socialmediaicons{
+  text-align: center;
+}
+
+.mid-section {
+ background-color: #DCDCDC;
+}
+
+.caption li{
+  list-style: none;
+}
+
+
+.footerp p {font-family: 'Gudea', sans-serif; }
+
+
+#social:hover {
+          -webkit-transform:scale(1.1); 
+-moz-transform:scale(1.1); 
+-o-transform:scale(1.1); 
+      }
+      #social {
+        -webkit-transform:scale(0.8);
+                /* Browser Variations: */
+-moz-transform:scale(0.8);
+-o-transform:scale(0.8); 
+-webkit-transition-duration: 0.5s; 
+-moz-transition-duration: 0.5s;
+-o-transition-duration: 0.5s;
+      }           
+/* 
+    Only Needed in Multi-Coloured Variation 
+                                               */
+      .social-fb:hover {
+        color: #3B5998;
+      }
+      .social-tw:hover {
+        color: #4099FF;
+      }
+      .social-gp:hover {
+        color: #d34836;
+      }
+      .social-em:hover {
+        color: #f39c12;
+      }
+      .nomargin { margin:0px; padding:0px;}

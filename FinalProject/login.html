@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Knowledge Hub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="library.css">
+  <style type="text/css">
+  .search-query {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+  </style>
+ </head>
+ <body>
+
+ <div class="container">
+  
+  <div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control"  id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control"  id="psw" placeholder="Enter password">
+            </div>
+            
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" ng-disabled="login.$invalid" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+
+<div class="container">
+
+<form class="form-inline navbar-form block" method="get" action="/Search/Results" name="searchForm" id="searchForm" autocomplete="off">
+      <input class="span5 searchquery" id="searchForm_lookfor" type="search" name="lookfor" placeholder="Search the library catalog" value="">
+              <select id="searchForm_type" name="type" data-native-menu="false">
+                                    <option value="AllFields">All Fields</option>
+                                                <option value="Title">Title</option>
+                                                <option value="Author">Author</option>
+                                                <option value="Subject">Subject</option>
+                                                <option value="CallNumber">Call Number</option>
+                                                <option value="ISN">ISBN/ISSN</option>
+                                                    </select>
+            <button type="submit" name="submit" class="btn" value="Find"><i class="icon-search"></i> Find</button>
+              <a href="/Search/Advanced" class="btn btn-link">Advanced</a>
+      
+      
+</form>
+
+</div>
+
+<div class="container">
+<div class="main row-fluid">
+        
+
+<p class="lead lightbox-header">Login</p>
+<div class="alert alert-error">You must be logged in first</div>
+    <form method="post" class="form-horizontal" action="/MyResearch/Home" name="loginForm" id="loginForm">
+    <div class="control-group">
+  <label class="control-label" for="login_username">KHub Username:</label>
+  <div class="controls">
+    <input id="login_username" type="text" name="username" value="">
+  </div>
+</div>
+<div class="control-group">
+  <label class="control-label" for="login_password">KHub Password:</label>
+  <div class="controls">
+    <input id="login_password" type="password" name="password">
+  </div>
+</div>    <input type="hidden" name="auth_method" value="VuFind\Auth\LDAP">
+    <div class="control-group">
+      <div class="controls">
+                <input class="btn btn-primary" type="submit" name="processLogin" value="Login">
+              </div>
+    </div>
+  </form>
+<div class="text-center"><em>Don’t have a KHub account?</em> <a href=>Log in to Classic View ›</a></div>
+</div>
+
+ </div>
+<script>
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+});
+</script>
+ </body>
+ </html>

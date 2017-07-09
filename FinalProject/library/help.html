@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Knowledge Hub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="main.css">
+  <script>
+  function Title(t1) 
+{
+
+ this.mytitle = t1;
+}
+
+Title.prototype.getName = function () 
+{ 
+return (this.mytitle);
+}
+
+var socialMedia = {
+  facebook : 'http://facebook.com',
+  twitter: 'http://twitter.com',
+  flickr: 'http://flickr.com',
+  youtube: 'http://youtube.com'
+};
+
+var t = new Title("CONNECT WITH ME!");
+  
+//document.getElementById("title").innerHTML = t.getName();
+
+
+function callSocialMedia(website)
+{
+  for(var prop in socialMedia)
+  {
+    if(prop == website)
+    {
+    window.location = socialMedia[prop];    
+    }
+  }
+}
+
+$(function(){
+  $("#header").load("header.html"); 
+  $("#footer").load("footer.html"); 
+});
+
+  </script>
+ <!--  <style type="text/css">
+    footer{
+  background-color: #191923;
+  padding: 40px;
+  color: #9d9d9d;
+	font-size: .80em;
+	font-style: italic;
+	text-align: center;
+
+}
+  footer a {
+      color: #9d9d9d;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  } 
+
+.socialmediaicons ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socialmediaicons ul li {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.socialmediaicons ul li img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.socialmediaicons{
+  text-align: center;
+}
+    
+  </style> -->
+</head>
+
+<body id="myHome" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- Include header -->
+<div class="container-fluid">    
+  <div class="row">
+  <br/>
+  </div>
+      <div  class="row"> 
+        <div class="col-sm-4">
+          <img class="img-responsive" src="images/logo.png" alt="Logo">
+        </div>      
+        <div class="col-sm-4">
+          <!--<img class="img-responsive navbar-right" src="images/ISA.jpg" alt="Logo"> -->
+          <p class="navbar-text visible-lg">
+       Hours Today: Open 24 Hours <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+      </p>
+        </div>  
+         <div class="col-sm-4">
+      <div class="topbar-left pull-right">
+          <ul class="nav navbar-nav navbar-left">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+      </div> 
+      </div>
+      </div>
+
+   <div class="row"> 
+
+  <nav class="navbar navbar-inverse" data-spy="affix" data-offset="50">
+
+ <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="kh_home.html">Home</a></li>
+        <li ><a href="#">About Us</a></li>
+        <li><a href="library/lib_1.html">Library</a></li>
+         <li><a href="#">Events</a></li>
+         <li><a href="#">E-Learning</a></li>
+         <li><a href="#">Services</a></li> 
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="library/help.html">Help</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       
+       <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+    <li>
+     <form role="search" class="navbar-form navbar-left" id ="form1">
+        <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blogs, Forums, E-Resources, Discussions">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"/>
+        </button>
+        </span>
+        </div>
+        </form>
+    </li>
+      </ul>
+      </div>
+      
+    </nav>
+    </div>
+
+</div>
+
+
+ <div class="container">
+  <h1 id="page-title" class="title"> Get Help </h1>
+ <div class="row text-center"> 
+ <div class = "col-lg-12">
+ <p>Welcome to the Knowledge Hub Help Centre. This is a collection of  knowledge and know-how compiled by KHub Team staff and members of our wider Knowledge Hub community on how to use the Knowledge Hub. Frequently Asked Questions</p>
+ </div>
+</div>
+  <h2> New to Knowledge Hub ? </h2>
+  </div>
+
+<div class="container well">
+ <div class="row">
+      
+      <div class="media">
+ <div class="col-sm-12 col-md-6 col-lg-6">
+ 
+     <p>Knowledge Hub Library was established in 1911 and is one of the one of the best scientific and technical libraries. It seeks to align its mission and values with those of the Knowledge Hub while also articulating a unique vision for the Library’s future. Our mission is to advance the intellectual vitality, knowledge, and creativity of the Portland State University community. We are committed to the University motto, Let Knowledge Serve the City'</p> 
+
+  </div>
+  <div class="col-sm-6">
+   <div class="media-left pull-left">
+    <img src="images/khub_help.png" class="media-object">
+  </div>
+  </div>
+</div>
+
+  
+   </div>  
+
+</div>
+
+<div class="container">
+ 
+
+ <div class="row text-center">
+ <div class="col-md-6">
+ <h2> <a href="/askus"> Ask Us </a> </h2>
+ <p>Phone, chat, text, email, consultation requests.</p>
+ </div>
+ <div class="col-md-6">
+ <h2> <a href="/researchconsultation"> Research Consultation </a> </h2>
+ <p>Schedule an appointment with a librarian subject specialist about your research project</p>
+ </div>
+ </div>
+
+ <div class="row text-center">
+ <div class="col-md-6">
+ <h2> <a href="/digital-media-lab/techconsult"> Technology Consultation </a> </h2>
+ <p> Schedule an appointment with a digital media specialist </p>
+ </div>
+ <div class="col-md-6">
+ <h2> <a href="/workshops/research"> Research Workshops </a> </h2>
+ <p>Upcoming workshops including literature searching, citation management, and an array of other topics</p>
+ </div>
+ </div>
+
+ <div class="row text-center">
+ <div class="col-md-6">
+ <h2> <a href="/publishing-and-copyright"> Copyright Guidance </a> </h2>
+ <p> Help with using copyrighted works, protecting author rights </p>
+ </div>
+ <div class="col-md-6">
+ <h2> <a href="/courseTools"> Course Tools </a> </h2>
+ <p>Recommended resources by course.</p>
+ </div>
+ </div>
+
+</div>
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myHome" data-toggle="tooltip" title="Go to Home">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br>
+
+  <div class="container-fluid mid-section">
+ <div>
+   <div class="row">
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption">
+           <h4>Services</h4>
+           <ul>
+             <li><a href="#">Issue Books</a></li>
+             <li><a href="#">Printings</a></li>
+             <li><a href="#">Online Seminars</a></li>
+             <li><a href="#">3D Display Room</a></li>
+             <li><a href="#">Shipping Facilities</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption">
+           <h4>Research Help</h4>
+           <ul>
+             <li><a href="#">Personal Research Reserves</a></li>
+             <li><a href="#">Subject Matter Specialist</a></li>
+             <li><a href="#">Research Guides</a></li>
+             <li><a href="#">Citations</a></li>
+              <li><a href="#">Online Research Access</a></li>
+             <li><a href="#">Ask a libarian</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption">
+           <h4>Learning Outreach</h4>
+           <ul>
+             <li><a href="#">Scholarships</a></li>
+             <li><a href="#">Lifelong Learnings</a></li>
+             <li><a href="#">Certifications</a></li>
+             <li><a href="#">Writing Meetups</a></li>
+             <li><a href="#">BLOGging</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption">
+           <h4>Library Spaces</h4>
+           <ul>
+             <li><a href="#">Auditoriums</a></li>
+             <li><a href="#">Group Study Rooms</a></li>
+             <li><a href="#">Collaboration Labs</a></li>
+             <li><a href="#">Food Joints</a></li>
+             <li><a href="#">Business Rooms</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+  <br>
+
+  <nav class="socialmediaicons">
+    
+  <h4 id="title"> </h4>
+  <ul>
+  <li>
+  <img src='images/facebook.png' alt='facebook' onclick="callSocialMedia('facebook')" /> 
+  </li>
+  <li>
+  <img src='images/twitter.png' alt='twitter' onclick="callSocialMedia('twitter')"/> 
+  </li>
+  <li>
+  <img src='images/flickr.png' alt='flickr' onclick="callSocialMedia('flickr')"/>
+  </li>
+  <li>
+  <img src='images/youtube.png' alt='youtube' onclick="callSocialMedia('youtube')"/>
+  </li>
+  </ul>
+  </nav>
+  <br/>
+  <p>&copy;Knowledge Hub</p>  
+<a href="mailto:sruthi.ravula@knowledgehub.com">sruthi@ravula.com</a>
+</footer>
+
+</body>
+</html>

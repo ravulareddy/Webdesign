@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Knowledge Hub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+<style type="text/css">
+  /* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  dl.tabs dd:first-child {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+dl.tabs dd {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.tabs dd {
+    position: relative;
+    margin-bottom: 0 !important;
+    float: left;
+}
+dl dd {
+    margin-bottom: 0.75rem;
+}
+
+  @media only screen and (min-width: 960px)[role="navigation"].container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3% 4%;
+  }
+
+  body{
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  }
+
+  section
+  {
+   border: 0;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+  }
+}
+
+.selectpicker{
+  height: 40px;
+  width: auto;
+}
+
+ #searchText {
+  height: 40px;
+  width: 350px;
+ }
+
+
+
+.form-inline{
+  margin-bottom: 20px;
+}
+
+.advance-search{
+  background: #48b17b; 
+  background: -webkit-linear-gradient(left top,rgba(108, 123, 177, 1),rgba(72,  177, 123,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom right,rgba(108, 123, 177, 1),rgba(72,  177, 123, 1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom right,rgba(108, 123, 177, 1),rgba(72,  177, 123, 1)); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom right, rgba(108, 123, 177, 1), rgba(72,  177, 123, 1)); /*Standard*/
+}
+
+.advance-search h1{
+  color: #007480;
+  text-shadow: 2px 2px 4px #000000; 
+}
+
+.advance-search button{
+  margin-left: 30px;
+}
+
+</style>
+
+</head>
+<body id="myHome" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<div class="container-fluid">    
+      <div  class="row"> 
+        <div class="col-sm-4">
+          <img class="img-responsive" src="images/logo.png" alt="Logo">
+        </div>      
+        <div class="col-sm-4">
+          <!--<img class="img-responsive navbar-right" src="images/ISA.jpg" alt="Logo"> -->
+          <p class="navbar-text visible-lg">
+       Hours Today: Open 24 Hours <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+      </p>
+        </div>  
+         <div class="col-sm-4">
+      <div class="topbar-left pull-right">
+          <ul class="nav navbar-nav navbar-left">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+      </div> 
+      </div>
+      </div>
+
+<div class="row">
+  
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset="50">
+
+ <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#myHome">Home</a></li>
+        <li ><a href="#">About Us</a></li>
+        <li><a href="library.html">Library</a></li>
+         <li><a href="#">Events</a></li>
+         <li><a href="#">E-Learning</a></li>
+         <li><a href="#">Services</a></li> 
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="help.html">Help</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       
+       <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+    <li>
+     <form role="search" class="navbar-form navbar-left" id ="form1">
+        <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blogs, Forums, E-Resources, Discussions">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"/>
+        </button>
+        </span>
+        </div>
+        </form>
+    </li>
+      </ul>
+      
+     </div>
+
+    </nav>
+  </div>
+  </div>
+
+<div class="container-fluid">    
+<div class="row">
+  <div class="col-sm-3">
+    <div class="sidebar-nav">
+      <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+            <span class="sr-only">Library Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="visible-xs navbar-brand">Library Menu</span>
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#">Library Hours</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Library Services<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Borrow Book</a></li>
+                <li><a href="#">Renew Book</a></li>
+              </ul>
+            </li>
+            
+            <li>
+            <a href="#">Ask a Librarian</a>
+            </li>
+            <li>
+            <a href="#">Getting started? </a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 advance-search">
+
+         <h1> Advance Search</h1> 
+            <form accept-charset="utf-8" method="get" action="library_advance.php">
+
+              <div class="form-group">
+                <label for="searchText"><h3>Search Books | Articles | Journals </h3></label>
+                <input type="text" class="form-control" id="searchText" placeholder="Enter details">
+                <span><p class="search-example">Eg : Web Design</p> </span>
+              </div>
+
+             <div class="form-inline"> 
+             <select class="selectpicker" name ="">
+              <option>Keyword Anywhere</option>
+              <option>Title</option>
+              <option>Auhtor</option>
+              <option>Description</option>
+               <option>Category</option>
+              <option>ISBN</option>
+            </select>
+
+            <select class="selectpicker">
+              <option>contains</option>
+              <option>Title</option>
+              <option>exact match</option>
+              <option>starts with</option>
+            </select>
+
+            <input type="text" class="form-control" id="searchText" placeholder="Algorithms">
+
+            </div>
+            <div class="form-group">
+            <select class="selectpicker">
+              <option>AND</option>
+              <option>OR</option>
+            </select>
+            </div>
+             <div class="form-inline"> 
+             <select class="selectpicker">
+              <option>Keyword Anywhere</option>
+              <option>Title</option>
+              <option>Auhtor</option>
+              <option>Description</option>
+               <option>Category</option>
+              <option>ISBN</option>
+            </select>
+
+            <select class="selectpicker">
+              <option>contains</option>
+              <option>Title</option>
+              <option>exact match</option>
+              <option>starts with</option>
+            </select>
+
+            <input type="text" class="form-control" id="searchText" placeholder="Algorithms">
+
+            </div>
+            <div class="form-group">
+            <label class="searchText"><h3>Publication Year</h3></label>
+             <select class="selectpicker">
+              <option>2017</option>
+              <option>Last 5 years</option>
+              <option>Last 10 years</option>
+              <option>Anytime</option>
+            </select>
+            </div>
+            <div class="form-group">
+             <button type="submit" name="submit" class="btn btn-primary btn-lg ">Search</button>
+             <button type="reset" name="reset" class="btn btn-primary btn-lg ">Clear</button>
+            </div>
+            </form>
+
+
+  </div>
+
+  <div class="col-sm-3">
+
+   </div> 
+</div>
+</div>
+
+<div class="container-fluid">
+
+</div>
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myHome" data-toggle="tooltip" title="Go to Home">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br>
+
+  <div class="container-fluid mid-section">
+ <div>
+   <div class="row">
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption">
+           <h4>Services</h4>
+           <ul>
+             <li><a href="#">Issue Books</a></li>
+             <li><a href="#">Printings</a></li>
+             <li><a href="#">Online Seminars</a></li>
+             <li><a href="#">3D Display Room</a></li>
+             <li><a href="#">Shipping Facilities</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption">
+           <h4>Research Help</h4>
+           <ul>
+             <li><a href="#">Personal Research Reserves</a></li>
+             <li><a href="#">Subject Matter Specialist</a></li>
+             <li><a href="#">Research Guides</a></li>
+             <li><a href="#">Citations</a></li>
+              <li><a href="#">Online Research Access</a></li>
+             <li><a href="#">Ask a libarian</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption">
+           <h4>Learning Outreach</h4>
+           <ul>
+             <li><a href="#">Scholarships</a></li>
+             <li><a href="#">Lifelong Learnings</a></li>
+             <li><a href="#">Certifications</a></li>
+             <li><a href="#">Writing Meetups</a></li>
+             <li><a href="#">BLOGging</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-6 col-md-3">
+       <div class="thumbnail" style="background: transparent; border: none;">
+         <div class="caption">
+           <h4>Library Spaces</h4>
+           <ul>
+             <li><a href="#">Auditoriums</a></li>
+             <li><a href="#">Group Study Rooms</a></li>
+             <li><a href="#">Collaboration Labs</a></li>
+             <li><a href="#">Food Joints</a></li>
+             <li><a href="#">Business Rooms</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+  <br>
+
+  <nav class="socialmediaicons">
+    
+  <h4 id="title"> </h4>
+  <ul>
+  <li>
+  <img src='images/facebook.png' alt='facebook' onclick="callSocialMedia('facebook')" /> 
+  </li>
+  <li>
+  <img src='images/twitter.png' alt='twitter' onclick="callSocialMedia('twitter')"/> 
+  </li>
+  <li>
+  <img src='images/flickr.png' alt='flickr' onclick="callSocialMedia('flickr')"/>
+  </li>
+  <li>
+  <img src='images/youtube.png' alt='youtube' onclick="callSocialMedia('youtube')"/>
+  </li>
+  </ul>
+  </nav>
+  <br/>
+  <p>&copy;Knowledge Hub</p>  
+<a href="mailto:sruthi.ravula@knowledgehub.com">sruthi@ravula.com</a>
+</footer>
+
+</body>
+</html>
